@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="PWMasterCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="319" height="179"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="319" height="179"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ysr-lb-N6Q">
+                        <rect key="frame" x="0.0" y="0.0" width="319" height="179"/>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eho-yo-uc5">
+                        <rect key="frame" x="0.0" y="0.0" width="319" height="179"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="May 4, 2015 at 4:30pm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZDm-u9-nzS">
+                                <rect key="frame" x="20" y="47" width="127" height="14"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="11"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Death Star Ventilation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x6O-wn-JtT">
+                                <rect key="frame" x="20" y="69" width="205" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Conference Rm 1289" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lDP-RW-1sP">
+                                <rect key="frame" x="20" y="101" width="133" height="16"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rebel Forces spotted on Hoth. Quell  their rebellion for the Empire." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ryb-xK-69I">
+                                <rect key="frame" x="20" y="125" width="279" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="0.80000000000000004" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZDm-u9-nzS" firstAttribute="leading" secondItem="eho-yo-uc5" secondAttribute="leading" constant="20" symbolic="YES" id="1qh-Ll-M44"/>
+                            <constraint firstItem="lDP-RW-1sP" firstAttribute="leading" secondItem="eho-yo-uc5" secondAttribute="leading" constant="20" symbolic="YES" id="27I-wS-GA6"/>
+                            <constraint firstAttribute="bottom" secondItem="Ryb-xK-69I" secondAttribute="bottom" constant="20" symbolic="YES" id="LWd-VM-JcC"/>
+                            <constraint firstItem="Ryb-xK-69I" firstAttribute="leading" secondItem="eho-yo-uc5" secondAttribute="leading" constant="20" symbolic="YES" id="Upb-ge-b66"/>
+                            <constraint firstItem="lDP-RW-1sP" firstAttribute="top" secondItem="x6O-wn-JtT" secondAttribute="bottom" constant="8" symbolic="YES" id="a1P-aU-Idi"/>
+                            <constraint firstItem="x6O-wn-JtT" firstAttribute="leading" secondItem="eho-yo-uc5" secondAttribute="leading" constant="20" symbolic="YES" id="dFu-Kg-hpK"/>
+                            <constraint firstItem="Ryb-xK-69I" firstAttribute="top" secondItem="lDP-RW-1sP" secondAttribute="bottom" constant="8" symbolic="YES" id="dfn-6b-3N3"/>
+                            <constraint firstAttribute="trailing" secondItem="Ryb-xK-69I" secondAttribute="trailing" constant="20" symbolic="YES" id="gff-Hg-hHh"/>
+                            <constraint firstItem="x6O-wn-JtT" firstAttribute="top" secondItem="ZDm-u9-nzS" secondAttribute="bottom" constant="8" symbolic="YES" id="pTI-xl-2fv"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstItem="eho-yo-uc5" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="6Y6-oj-PfX"/>
+                <constraint firstAttribute="trailing" secondItem="Ysr-lb-N6Q" secondAttribute="trailing" id="Ro7-os-13Q"/>
+                <constraint firstItem="eho-yo-uc5" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Sea-Dw-Bsh"/>
+                <constraint firstItem="Ysr-lb-N6Q" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="TPE-jw-1aX"/>
+                <constraint firstAttribute="trailing" secondItem="eho-yo-uc5" secondAttribute="trailing" id="frh-uQ-Ygj"/>
+                <constraint firstAttribute="bottom" secondItem="eho-yo-uc5" secondAttribute="bottom" id="jcu-v3-pGT"/>
+                <constraint firstAttribute="bottom" secondItem="Ysr-lb-N6Q" secondAttribute="bottom" id="jmI-8z-Huz"/>
+                <constraint firstItem="Ysr-lb-N6Q" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="zSq-V1-B6b"/>
+            </constraints>
+            <size key="customSize" width="319" height="179"/>
+            <connections>
+                <outlet property="backgroundImageView" destination="Ysr-lb-N6Q" id="uPZ-zj-ZbG"/>
+                <outlet property="dateLabel" destination="ZDm-u9-nzS" id="xNt-KR-dvx"/>
+                <outlet property="descriptionLabel" destination="Ryb-xK-69I" id="UlU-2W-m3r"/>
+                <outlet property="subTitleLabel" destination="lDP-RW-1sP" id="Kq2-AI-FzG"/>
+                <outlet property="titleLabel" destination="x6O-wn-JtT" id="6nC-iw-ZlE"/>
+            </connections>
+            <point key="canvasLocation" x="990.5" y="726.5"/>
+        </collectionViewCell>
+    </objects>
+</document>
