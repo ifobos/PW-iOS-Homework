@@ -112,12 +112,6 @@ CGFloat  const kMinOffsetY = - 64;
                                             ];
     UIActivityViewController *activity  = [[UIActivityViewController alloc] initWithActivityItems:itemsToShare
                                                                                 applicationActivities:nil];
-    activity.excludedActivityTypes      = @[
-                                            UIActivityTypePrint,
-                                            UIActivityTypeCopyToPasteboard,
-                                            UIActivityTypeAssignToContact,
-                                            UIActivityTypeSaveToCameraRoll
-                                            ];
     [self presentViewController:activity
                        animated:YES
                      completion:nil];
