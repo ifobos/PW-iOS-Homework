@@ -10,5 +10,7 @@
 #import "PWItemController.h"
 
 @interface PWDetailViewController : UITableViewController <PWViewController>
+
 @property (nonatomic, strong) PWItemController *itemController;
+
 @end

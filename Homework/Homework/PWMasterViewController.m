@@ -14,7 +14,6 @@
 
 @implementation PWMasterViewController
 
-
 static NSInteger    const smallScreenColumns    = 1;
 static NSInteger    const bigScreenColumns      = 2;
 static CGFloat      const cellHeight            = 180;
@@ -97,13 +96,11 @@ static NSString *   const reuseIdentifier       = @"Cell";
     [self.itemController goToDetailForItemAtIndex:indexPath.row];
 }
 
-
 #pragma mark - PWViewController
 
 - (void)loadData
 {
     [self.collectionView reloadData];
 }
-
 
 @end

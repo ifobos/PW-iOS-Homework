@@ -12,9 +12,13 @@
 #import "JRTActivityIndicator.h"
 
 @interface PWItemController()
-@property (nonatomic, strong)   NSArray     *items;
-@property (nonatomic)           NSInteger   selectedIndex;
+@property (nonatomic, strong)   NSArray         *items;
+@property (nonatomic)           NSInteger       selectedIndex;
+@property (nonatomic, strong)   NSDateFormatter *dateFormatter;
 @end
+
+NSString * const kFormatDateModel   = @"yyyy-MM-dd'T'HH:mm:ss.SSS'Z'";
+NSString * const kFormatDateView    = @"MMM d, yyyy 'at' h:mmaa";
 
 @implementation PWItemController
 
@@ -29,6 +33,20 @@
     }
     return _items;
 }
+
+- (NSDateFormatter *)dateFormatter
+{
+    if (!_dateFormatter)
+    {
+        _dateFormatter = [NSDateFormatter new];
+        [_dateFormatter setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"en_US"]];
+        [_dateFormatter setAMSymbol:@"am"];
+        [_dateFormatter setPMSymbol:@"pm"];
+    }
+    return _dateFormatter;
+}
+
+#pragma mark - Fetch
 
 - (void)fetchItems
 {
@@ -62,12 +80,13 @@
 
 - (NSString *)dateOfItemAtIndex:(NSInteger)index
 {
-    
-    NSDateFormatter *dateFormatter = [NSDateFormatter new];
-    [dateFormatter setTimeZone:[NSTimeZone systemTimeZone]];
-    [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
-    [dateFormatter setTimeStyle:NSDateFormatterShortStyle];
-    return [dateFormatter stringFromDate:[NSDate date]];
+    PWItemModel *targetItem = [self.items objectAtIndex:index];
+    [self.dateFormatter setTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"GMT"]];
+    [self.dateFormatter setDateFormat:kFormatDateModel];
+    NSDate *date            = [self.dateFormatter dateFromString:targetItem.date];
+    [self.dateFormatter setTimeZone:[NSTimeZone systemTimeZone]];
+    [self.dateFormatter setDateFormat:kFormatDateView];
+    return [self.dateFormatter stringFromDate:date];
 }
 
 - (NSString *)titleOfItemAtIndex:(NSInteger)index
@@ -85,7 +104,7 @@
 - (NSString *)descriptionOfItemAtIndex:(NSInteger)index
 {
     PWItemModel *targetItem = [self.items objectAtIndex:index];
-    return targetItem.description;
+    return targetItem.about;
 }
 
 #pragma mark - Navigation

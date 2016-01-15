@@ -10,5 +10,7 @@
 #import "PWItemController.h"
 
 @interface PWMasterViewController : UICollectionViewController <PWViewController>
+
 @property (nonatomic, strong) PWItemController *itemController;
+
 @end

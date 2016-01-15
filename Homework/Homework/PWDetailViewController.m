@@ -123,6 +123,4 @@ CGFloat  const kMinOffsetY = - 64;
                      completion:nil];
 }
 
-
-
 @end
