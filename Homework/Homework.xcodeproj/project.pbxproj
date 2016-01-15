@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		31225BA61C4956A2007E240D /* JRTRoundedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31225BA51C4956A2007E240D /* JRTRoundedView.m */; };
 		3179E7701C47FE7300B3890E /* JRTModelAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 3179E76F1C47FE7300B3890E /* JRTModelAPI.m */; };
 		3179E7741C47FFBA00B3890E /* PWModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3179E7731C47FFBA00B3890E /* PWModel.m */; };
 		3179E7771C4811EB00B3890E /* PWItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3179E7761C4811EB00B3890E /* PWItemModel.m */; };
@@ -53,6 +54,8 @@
 
 /* Begin PBXFileReference section */
 		232304340E52882286E38209 /* Pods-Homework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Homework.release.xcconfig"; path = "Pods/Target Support Files/Pods-Homework/Pods-Homework.release.xcconfig"; sourceTree = "<group>"; };
+		31225BA41C4956A2007E240D /* JRTRoundedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JRTRoundedView.h; sourceTree = "<group>"; };
+		31225BA51C4956A2007E240D /* JRTRoundedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JRTRoundedView.m; sourceTree = "<group>"; };
 		3179E76E1C47FE7300B3890E /* JRTModelAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JRTModelAPI.h; sourceTree = "<group>"; };
 		3179E76F1C47FE7300B3890E /* JRTModelAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JRTModelAPI.m; sourceTree = "<group>"; };
 		3179E7721C47FFBA00B3890E /* PWModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PWModel.h; sourceTree = "<group>"; };
@@ -127,6 +130,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		31225BA31C4956A2007E240D /* RoundedView */ = {
+			isa = PBXGroup;
+			children = (
+				31225BA41C4956A2007E240D /* JRTRoundedView.h */,
+				31225BA51C4956A2007E240D /* JRTRoundedView.m */,
+			);
+			path = RoundedView;
+			sourceTree = "<group>";
+		};
 		3179E76D1C47FE7300B3890E /* JSONModel + AFNetworking */ = {
 			isa = PBXGroup;
 			children = (
@@ -235,6 +247,7 @@
 		31B664EB1C46A7A500105544 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				31225BA31C4956A2007E240D /* RoundedView */,
 				3179E7811C481C1800B3890E /* ActualViewController */,
 				3179E7781C481BAE00B3890E /* ActivityIndicator */,
 				3179E76D1C47FE7300B3890E /* JSONModel + AFNetworking */,
@@ -558,6 +571,7 @@
 				3179E77E1C481BAE00B3890E /* JRTActivityIndicator.m in Sources */,
 				31B6651B1C47138D00105544 /* PWDetailViewController.m in Sources */,
 				3179E77F1C481BAE00B3890E /* JRTActivityIndicatorView.m in Sources */,
+				31225BA61C4956A2007E240D /* JRTRoundedView.m in Sources */,
 				3179E7701C47FE7300B3890E /* JRTModelAPI.m in Sources */,
 				3179E7741C47FFBA00B3890E /* PWModel.m in Sources */,
 				3179E7771C4811EB00B3890E /* PWItemModel.m in Sources */,
@@ -700,7 +714,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Homework/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.applaudostudios.Homework;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -713,7 +727,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Homework/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.applaudostudios.Homework;
 				PRODUCT_NAME = "$(TARGET_NAME)";
