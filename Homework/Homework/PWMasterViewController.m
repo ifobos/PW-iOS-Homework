@@ -36,8 +36,8 @@ static NSString *   const reuseIdentifier       = @"Cell";
 {
     if (!_itemController)
     {
-        _itemController = [PWItemController new];
-        _itemController.viewController = self;
+        _itemController                     = [PWItemController new];
+        _itemController.mainViewController  = self;
     }
     return _itemController;
 }
