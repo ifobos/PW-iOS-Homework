@@ -112,9 +112,17 @@ CGFloat  const kMinOffsetY = - 64;
                                             ];
     UIActivityViewController *activity  = [[UIActivityViewController alloc] initWithActivityItems:itemsToShare
                                                                                 applicationActivities:nil];
-    [self presentViewController:activity
-                       animated:YES
-                     completion:nil];
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+    {
+       UIPopoverController *popOver = [[UIPopoverController alloc] initWithContentViewController:activity];
+        [popOver presentPopoverFromBarButtonItem:self.navigationItem.rightBarButtonItem permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+    }
+    else
+    {
+        [self presentViewController:activity
+                           animated:YES
+                         completion:nil];
+    }
 }
 
 @end

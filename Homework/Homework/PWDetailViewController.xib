@@ -41,13 +41,13 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="May 4, 2015 at 4:30pm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YBi-KH-2wO">
-                        <rect key="frame" x="20" y="181" width="127" height="14"/>
+                        <rect key="frame" x="20" y="180" width="127" height="14"/>
                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="11"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Death Star Ventilation" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="beE-Oh-JAb">
-                        <rect key="frame" x="20" y="202" width="205" height="24"/>
+                        <rect key="frame" x="20" y="202" width="560" height="24"/>
                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
@@ -57,6 +57,7 @@
                 <constraints>
                     <constraint firstItem="v0o-7N-Qei" firstAttribute="leading" secondItem="wqY-vP-DKN" secondAttribute="leading" id="5m8-lB-MtF"/>
                     <constraint firstAttribute="trailing" secondItem="AiL-Ea-wU4" secondAttribute="trailing" id="GOP-sK-hDZ"/>
+                    <constraint firstAttribute="trailing" secondItem="beE-Oh-JAb" secondAttribute="trailing" constant="20" symbolic="YES" id="Jx7-4d-bxg"/>
                     <constraint firstItem="Sw1-Oo-QJf" firstAttribute="top" secondItem="beE-Oh-JAb" secondAttribute="bottom" constant="8" symbolic="YES" id="KRb-Kc-2dy"/>
                     <constraint firstItem="AiL-Ea-wU4" firstAttribute="top" secondItem="wqY-vP-DKN" secondAttribute="top" constant="-64" id="L5q-aZ-aaG"/>
                     <constraint firstItem="beE-Oh-JAb" firstAttribute="top" secondItem="YBi-KH-2wO" secondAttribute="bottom" constant="8" symbolic="YES" id="Rq1-Dd-dwt"/>
