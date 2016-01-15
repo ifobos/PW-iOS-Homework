@@ -47,7 +47,7 @@ CGFloat  const kMinOffsetY = - 64;
 - (void)setUp
 {
     self.navigationItem.leftBarButtonItem   = [[PWNavigation sharedIntance] backBarButtonWithTarget:self action:@selector(goBack)];
-    self.navigationItem.rightBarButtonItem  = [[PWNavigation sharedIntance] shareBarButtonWithTarget:self action:@selector(share)];
+    self.navigationItem.rightBarButtonItem  = [[PWNavigation sharedIntance] shareBarButtonWithTarget:self action:@selector(share:)];
     [self loadData];
 }
 
@@ -104,25 +104,13 @@ CGFloat  const kMinOffsetY = - 64;
 
 #pragma mark - Share
 
-- (void)share
+- (void)share:(id)sender
 {
-    NSArray *itemsToShare               = @[
-                                            [NSString stringWithFormat:@"%@\n\n%@", self.titleLabel.text, self.descriptionLabel.text],
-                                            self.imageView.image
-                                            ];
-    UIActivityViewController *activity  = [[UIActivityViewController alloc] initWithActivityItems:itemsToShare
-                                                                                applicationActivities:nil];
-    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
-    {
-       UIPopoverController *popOver = [[UIPopoverController alloc] initWithContentViewController:activity];
-        [popOver presentPopoverFromBarButtonItem:self.navigationItem.rightBarButtonItem permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
-    }
-    else
-    {
-        [self presentViewController:activity
-                           animated:YES
-                         completion:nil];
-    }
+    NSArray *itemsToShare = @[
+                              [NSString stringWithFormat:@"%@\n\n%@", self.titleLabel.text, self.descriptionLabel.text],
+                              self.imageView.image
+                              ];
+    [self.itemController shareItem:itemsToShare sender:sender];
 }
 
 @end

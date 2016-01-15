@@ -16,7 +16,7 @@
 
 @interface PWItemController : NSObject
 
-@property (nonatomic, weak) UIViewController<PWViewController> *viewController;
+@property (nonatomic, weak) UIViewController<PWViewController> *mainViewController;
 
 - (NSInteger) numberOfItems;
 - (NSURL *)imageURLOfItemAtIndex:(NSInteger)index;
@@ -30,5 +30,6 @@
 - (NSString *)titleOfSelectedItem;
 - (NSString *)subTitleOfSelectedItem;
 - (NSString *)descriptionOfSelectedItem;
+- (void)shareItem:(NSArray *)itemsToShare sender:(id)sender;
 
 @end

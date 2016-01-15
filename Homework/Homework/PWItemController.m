@@ -55,7 +55,7 @@ NSString * const kFormatDateView    = @"MMM d, yyyy 'at' h:mmaa";
     [[PWItemModel new] itemListWithSuccess:^(id data)
     {
         self.items = data;
-        [self.viewController loadData];
+        [self.mainViewController loadData];
         [activityIndicator removeAnimated:YES];
     }
                                    failure:^(NSError *error)
@@ -114,7 +114,7 @@ NSString * const kFormatDateView    = @"MMM d, yyyy 'at' h:mmaa";
     self.selectedIndex                              = index;
     PWDetailViewController *detailViewController    = [PWDetailViewController new];
     detailViewController.itemController             = self;
-    [self.viewController.navigationController pushViewController:detailViewController animated:YES];
+    [self.mainViewController.navigationController pushViewController:detailViewController animated:YES];
 }
 
 #pragma mark - Detail Item
@@ -142,6 +142,28 @@ NSString * const kFormatDateView    = @"MMM d, yyyy 'at' h:mmaa";
 - (NSString *)descriptionOfSelectedItem
 {
     return [self descriptionOfItemAtIndex:self.selectedIndex];
+}
+
+#pragma mark - Share
+
+- (void)shareItem:(NSArray *)itemsToShare sender:(id)sender
+{
+    UIActivityViewController *activity  = [[UIActivityViewController alloc] initWithActivityItems:itemsToShare
+                                                                            applicationActivities:nil];
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+    {
+        UIPopoverController *popOver = [[UIPopoverController alloc] initWithContentViewController:activity];
+        [popOver presentPopoverFromBarButtonItem:sender
+                        permittedArrowDirections:UIPopoverArrowDirectionAny
+                                        animated:YES];
+    }
+    else
+    {
+        [self.mainViewController.navigationController presentViewController:activity
+                                                                   animated:YES
+                                                                 completion:nil];
+    }
+
 }
 
 @end

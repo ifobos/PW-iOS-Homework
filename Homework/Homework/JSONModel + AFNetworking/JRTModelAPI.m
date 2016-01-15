@@ -18,6 +18,9 @@
 //OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //THE SOFTWARE.
 
+//This is an Alpha Version, Updating for AFNetworking 3.0.4
+
+
 #import "JRTModelAPI.h"
 
 
