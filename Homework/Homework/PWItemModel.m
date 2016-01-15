@@ -12,6 +12,7 @@ NSString * const kCacheItems = @"cacheItems";
 
 @implementation PWItemModel
 
+#pragma mark - JSONModel
 
 + (JSONKeyMapper*)keyMapper
 {
@@ -25,11 +26,11 @@ NSString * const kCacheItems = @"cacheItems";
     return YES;
 }
 
+#pragma mark - Requests
+
 - (void)itemListWithSuccess:(void (^)(id data))success
                     failure:(void (^)(NSError * error))failure
 {
-    
-    
     if ([[NSUserDefaults standardUserDefaults] arrayForKey:kCacheItems])
     {
         NSError *error      = nil;

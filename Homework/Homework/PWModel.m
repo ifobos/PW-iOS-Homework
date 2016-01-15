@@ -21,7 +21,6 @@
     return @"https://raw.githubusercontent.com/phunware/services-interview-resources/master";
 }
 
-
 - (NSString *)keyErrorDescription
 {
     return nil;

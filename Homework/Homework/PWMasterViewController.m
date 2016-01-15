@@ -14,7 +14,6 @@
 
 @implementation PWMasterViewController
 
-
 static NSInteger    const smallScreenColumns    = 1;
 static NSInteger    const bigScreenColumns      = 2;
 static CGFloat      const cellHeight            = 180;

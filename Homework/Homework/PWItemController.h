@@ -7,12 +7,17 @@
 //
 
 @import UIKit;
+
 @protocol PWViewController <NSObject>
+
 - (void)loadData;
+
 @end
 
 @interface PWItemController : NSObject
+
 @property (nonatomic, weak) UIViewController<PWViewController> *viewController;
+
 - (NSInteger) numberOfItems;
 - (NSURL *)imageURLOfItemAtIndex:(NSInteger)index;
 - (NSString *)dateOfItemAtIndex:(NSInteger)index;

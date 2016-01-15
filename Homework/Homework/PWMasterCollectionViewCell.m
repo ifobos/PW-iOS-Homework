@@ -9,13 +9,14 @@
 #import "PWMasterCollectionViewCell.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 
-
 @interface PWMasterCollectionViewCell()
+
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundImageView;
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *subTitleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
+
 @end
 
 @implementation PWMasterCollectionViewCell

@@ -17,4 +17,5 @@
 - (void)navigationBarWhiteStyleWithAlpha:(CGFloat)alpha;
 - (UIBarButtonItem *)backBarButtonWithTarget:(id)target action:(SEL)action;
 - (UIBarButtonItem *)shareBarButtonWithTarget:(id)target action:(SEL)action;
+
 @end
