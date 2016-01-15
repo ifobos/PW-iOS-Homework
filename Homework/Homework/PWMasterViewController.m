@@ -97,13 +97,11 @@ static NSString *   const reuseIdentifier       = @"Cell";
     [self.itemController goToDetailForItemAtIndex:indexPath.row];
 }
 
-
 #pragma mark - PWViewController
 
 - (void)loadData
 {
     [self.collectionView reloadData];
 }
-
 
 @end
