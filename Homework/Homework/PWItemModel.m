@@ -8,6 +8,8 @@
 
 #import "PWItemModel.h"
 
+NSString * const kCacheItems = @"cacheItems";
+
 @implementation PWItemModel
 
 
@@ -26,10 +28,26 @@
 - (void)itemListWithSuccess:(void (^)(id data))success
                     failure:(void (^)(NSError * error))failure
 {
+    
+    
+    if ([[NSUserDefaults standardUserDefaults] arrayForKey:kCacheItems])
+    {
+        NSError *error      = nil;
+        NSArray *cacheData  = [[NSUserDefaults standardUserDefaults] arrayForKey:kCacheItems];
+        NSArray *cacheItems = [PWItemModel arrayOfModelsFromDictionaries:cacheData error:&error];
+        if (error)
+        {
+            NSLog(@"Error: %@", error);
+        }
+        success(cacheItems);
+    }
+    
     [self getPath:@"feed.json"
            params:@{}
           success:^(id data)
     {
+        [[NSUserDefaults standardUserDefaults] setObject:data forKey:kCacheItems];
+        [[NSUserDefaults standardUserDefaults] synchronize];
         NSError *error  = nil;
         NSArray *items  = [PWItemModel arrayOfModelsFromDictionaries:data error:&error];
         if (error)
