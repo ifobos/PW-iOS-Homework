@@ -10,6 +10,14 @@
 
 @implementation PWItemModel
 
+
++ (JSONKeyMapper*)keyMapper
+{
+    return [[JSONKeyMapper alloc] initWithDictionary:@{
+                                                       @"description": @"about"
+                                                       }];
+}
+
 + (BOOL)propertyIsOptional:(NSString*)propertyName
 {
     return YES;

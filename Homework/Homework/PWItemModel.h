@@ -9,7 +9,7 @@
 #import "PWModel.h"
 
 @interface PWItemModel : PWModel
-@property (nonatomic, strong) NSString *desciption;
+@property (nonatomic, strong) NSString *about;
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) NSString *timestamp;
 @property (nonatomic, strong) NSString *image;

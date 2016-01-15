@@ -85,7 +85,7 @@
 - (NSString *)descriptionOfItemAtIndex:(NSInteger)index
 {
     PWItemModel *targetItem = [self.items objectAtIndex:index];
-    return targetItem.description;
+    return targetItem.about;
 }
 
 #pragma mark - Navigation
