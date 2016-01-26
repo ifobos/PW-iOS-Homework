@@ -9,7 +9,7 @@
 #import "PWItemController.h"
 #import "PWDetailViewController.h"
 #import "PWItemModel.h"
-#import "JRTActivityIndicator.h"
+#import <JRTActivityIndicator.h>
 
 @interface PWItemController()
 @property (nonatomic, strong)   NSArray         *items;

@@ -19,13 +19,11 @@
 		31B664F81C46AB1500105544 /* PWMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31B664F61C46AB1500105544 /* PWMasterViewController.m */; };
 		31B664F91C46AB1500105544 /* PWMasterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31B664F71C46AB1500105544 /* PWMasterViewController.xib */; };
 		31B664FC1C46EC3900105544 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 31B664FB1C46EC3900105544 /* Localizable.strings */; };
-		31B665001C46ED3600105544 /* JRTNavigationBarStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 31B664FF1C46ED3600105544 /* JRTNavigationBarStyle.m */; };
 		31B665051C46F1D200105544 /* PWMasterCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 31B665031C46F1D200105544 /* PWMasterCollectionViewCell.m */; };
 		31B665061C46F1D200105544 /* PWMasterCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31B665041C46F1D200105544 /* PWMasterCollectionViewCell.xib */; };
 		31B665091C46FE0200105544 /* PWItemController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31B665081C46FE0200105544 /* PWItemController.m */; };
 		31B6651B1C47138D00105544 /* PWDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31B665191C47138D00105544 /* PWDetailViewController.m */; };
 		31B6651C1C47138D00105544 /* PWDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31B6651A1C47138D00105544 /* PWDetailViewController.xib */; };
-		31B665231C47141D00105544 /* JRTStretchyHeaderTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31B665211C47141D00105544 /* JRTStretchyHeaderTableView.m */; };
 		53E2AD91B97736ECCEC83B79 /* libPods-Homework.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B833400E00D749CAE779735 /* libPods-Homework.a */; };
 /* End PBXBuildFile section */
 
@@ -71,8 +69,6 @@
 		31B664F61C46AB1500105544 /* PWMasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PWMasterViewController.m; sourceTree = "<group>"; };
 		31B664F71C46AB1500105544 /* PWMasterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PWMasterViewController.xib; sourceTree = "<group>"; };
 		31B664FB1C46EC3900105544 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
-		31B664FE1C46ED3600105544 /* JRTNavigationBarStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JRTNavigationBarStyle.h; sourceTree = "<group>"; };
-		31B664FF1C46ED3600105544 /* JRTNavigationBarStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JRTNavigationBarStyle.m; sourceTree = "<group>"; };
 		31B665021C46F1D200105544 /* PWMasterCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PWMasterCollectionViewCell.h; sourceTree = "<group>"; };
 		31B665031C46F1D200105544 /* PWMasterCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PWMasterCollectionViewCell.m; sourceTree = "<group>"; };
 		31B665041C46F1D200105544 /* PWMasterCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PWMasterCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -81,8 +77,6 @@
 		31B665181C47138D00105544 /* PWDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PWDetailViewController.h; sourceTree = "<group>"; };
 		31B665191C47138D00105544 /* PWDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PWDetailViewController.m; sourceTree = "<group>"; };
 		31B6651A1C47138D00105544 /* PWDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PWDetailViewController.xib; sourceTree = "<group>"; };
-		31B665201C47141D00105544 /* JRTStretchyHeaderTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JRTStretchyHeaderTableView.h; sourceTree = "<group>"; };
-		31B665211C47141D00105544 /* JRTStretchyHeaderTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JRTStretchyHeaderTableView.m; sourceTree = "<group>"; };
 		7B833400E00D749CAE779735 /* libPods-Homework.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Homework.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3C194A9769CA7BDDE462151 /* Pods-Homework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Homework.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Homework/Pods-Homework.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -193,8 +187,6 @@
 		31B664EB1C46A7A500105544 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
-				31B6651D1C47141D00105544 /* StretchyHeaderTableView */,
-				31B664FD1C46ED3600105544 /* NavigationBarStyle */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -255,15 +247,6 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
-		31B664FD1C46ED3600105544 /* NavigationBarStyle */ = {
-			isa = PBXGroup;
-			children = (
-				31B664FE1C46ED3600105544 /* JRTNavigationBarStyle.h */,
-				31B664FF1C46ED3600105544 /* JRTNavigationBarStyle.m */,
-			);
-			path = NavigationBarStyle;
-			sourceTree = "<group>";
-		};
 		31B665011C46F1A500105544 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -282,15 +265,6 @@
 				31B6651A1C47138D00105544 /* PWDetailViewController.xib */,
 			);
 			name = DetailView;
-			sourceTree = "<group>";
-		};
-		31B6651D1C47141D00105544 /* StretchyHeaderTableView */ = {
-			isa = PBXGroup;
-			children = (
-				31B665201C47141D00105544 /* JRTStretchyHeaderTableView.h */,
-				31B665211C47141D00105544 /* JRTStretchyHeaderTableView.m */,
-			);
-			path = StretchyHeaderTableView;
 			sourceTree = "<group>";
 		};
 		71A51682A71B6D7A9A4D2905 /* Frameworks */ = {
@@ -497,12 +471,10 @@
 			files = (
 				31B664C31C46A60D00105544 /* AppDelegate.m in Sources */,
 				31B664F81C46AB1500105544 /* PWMasterViewController.m in Sources */,
-				31B665001C46ED3600105544 /* JRTNavigationBarStyle.m in Sources */,
 				31B664EF1C46A96A00105544 /* PWNavigation.m in Sources */,
 				31B6651B1C47138D00105544 /* PWDetailViewController.m in Sources */,
 				3179E7741C47FFBA00B3890E /* PWModel.m in Sources */,
 				3179E7771C4811EB00B3890E /* PWItemModel.m in Sources */,
-				31B665231C47141D00105544 /* JRTStretchyHeaderTableView.m in Sources */,
 				31B664C01C46A60D00105544 /* main.m in Sources */,
 				31B665051C46F1D200105544 /* PWMasterCollectionViewCell.m in Sources */,
 				31B665091C46FE0200105544 /* PWItemController.m in Sources */,

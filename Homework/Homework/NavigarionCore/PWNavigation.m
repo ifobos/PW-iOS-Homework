@@ -7,7 +7,7 @@
 //
 
 #import "PWNavigation.h"
-#import "JRTNavigationBarStyle.h"
+#import <JRTNavigationBarStyle.h>
 
 NSString * const kInitialViewController = @"PWMasterViewController";
 

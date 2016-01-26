@@ -18,6 +18,8 @@ PODS:
   - JRTAPIModel (0.0.1):
     - AFNetworking
     - JSONModel
+  - JRTNavigationBarStyle (0.0.1)
+  - JRTStretchyHeaderTableView (0.0.1)
   - JSONModel (1.2.0)
   - SDWebImage (3.7.4):
     - SDWebImage/Core (= 3.7.4)
@@ -26,12 +28,16 @@ PODS:
 DEPENDENCIES:
   - JRTActivityIndicator
   - JRTAPIModel
+  - JRTNavigationBarStyle
+  - JRTStretchyHeaderTableView
   - SDWebImage
 
 SPEC CHECKSUMS:
   AFNetworking: a0075feb321559dc78d9d85b55d11caa19eabb93
   JRTActivityIndicator: be776031f1db74f5d0f5b30a298f01bb285f3fad
   JRTAPIModel: 89b09f9d4cd287fae396b48cde9e2af56215731c
+  JRTNavigationBarStyle: 9a71a63e9a7220e55cb37b8c5e4a07f8ea3f2d49
+  JRTStretchyHeaderTableView: 23907ab02cf876141014f3f9f2a491aaf77c77b4
   JSONModel: 12523685c4b623553ccf844bbbf7007624317b2c
   SDWebImage: 247edd7dd80dd6124197b0d6a17846fe9d1df968
 
