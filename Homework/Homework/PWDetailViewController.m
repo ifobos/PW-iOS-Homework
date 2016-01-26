@@ -55,7 +55,7 @@ CGFloat  const kMinOffsetY = - 64;
 
 - (void)loadData
 {
-    [self.imageView sd_setImageWithURL:[self.itemController imageURLOfSelectedItem]];
+    [self.imageView sd_setImageWithURL:[self.itemController imageURLOfSelectedItem] placeholderImage:[UIImage imageNamed:@"placeholder"]];
     self.title                              = [self.itemController titleOfSelectedItem];
     self.dateLabel.text                     = [self.itemController dateOfSelectedItem];
     self.titleLabel.text                    = [self.itemController titleOfSelectedItem];

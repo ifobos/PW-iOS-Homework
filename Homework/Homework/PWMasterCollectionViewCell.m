@@ -23,7 +23,7 @@
 
 - (void)setBackgroundImageWithURL:(NSURL *)url
 {
-    [self.backgroundImageView sd_setImageWithURL:url];
+    [self.backgroundImageView sd_setImageWithURL:url placeholderImage:[UIImage imageNamed:@"placeholder"]];
 }
 
 - (void)setDate:(NSString *)date
