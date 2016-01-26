@@ -1,0 +1,1 @@
+../../../JRTActivityIndicator/JRTActivityIndicator/JRTActivityIndicator/PodFiles/JRTActivityIndicator.h

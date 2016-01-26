@@ -6,8 +6,8 @@
 //  Copyright © 2016 Applaudo Studios. All rights reserved.
 //
 
-#import "JRTModelAPI.h"
+#import <JRTAPIModel.h>
 
-@interface PWModel : JRTModelAPI
+@interface PWModel : JRTAPIModel
 
 @end

@@ -4,9 +4,11 @@
 # use_frameworks!
 
 target 'Homework' do
-pod 'JSONModel'
-pod 'AFNetworking'
+#pod 'JSONModel'
+#pod 'AFNetworking'
 pod 'SDWebImage'
+pod 'JRTActivityIndicator'
+pod 'JRTAPIModel'
 end
 
 target 'HomeworkTests' do

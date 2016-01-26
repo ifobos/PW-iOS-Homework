@@ -18,8 +18,19 @@
 //OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //THE SOFTWARE.
 
-#import "JRTActivityIndicatorView.h"
+@import UIKit;
 
-@implementation JRTActivityIndicatorView
+@protocol JRTActivityIndicatorViewProtocol
+- (void)setMessage:(NSString *)message;
+@end
 
+@interface JRTActivityIndicator : NSObject
+- (void)show;
+- (void)showAnimated:(BOOL)animated;
+- (void)showAnimated:(BOOL)animated message:(NSString *)message;
+- (void)showInView:(UIView *)view animated:(BOOL)animated network:(BOOL)network message:(NSString *)message;
+- (void)hide;
+- (void)hideAnimated:(BOOL)animated;
+- (void)ShowNetworkActivity;
+- (void)HideNetworkActivity;
 @end

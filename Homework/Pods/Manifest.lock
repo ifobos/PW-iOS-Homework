@@ -14,18 +14,24 @@ PODS:
   - AFNetworking/Serialization (3.0.4)
   - AFNetworking/UIKit (3.0.4):
     - AFNetworking/NSURLSession
+  - JRTActivityIndicator (0.0.1)
+  - JRTAPIModel (0.0.1):
+    - AFNetworking
+    - JSONModel
   - JSONModel (1.2.0)
   - SDWebImage (3.7.4):
     - SDWebImage/Core (= 3.7.4)
   - SDWebImage/Core (3.7.4)
 
 DEPENDENCIES:
-  - AFNetworking
-  - JSONModel
+  - JRTActivityIndicator
+  - JRTAPIModel
   - SDWebImage
 
 SPEC CHECKSUMS:
   AFNetworking: a0075feb321559dc78d9d85b55d11caa19eabb93
+  JRTActivityIndicator: be776031f1db74f5d0f5b30a298f01bb285f3fad
+  JRTAPIModel: 89b09f9d4cd287fae396b48cde9e2af56215731c
   JSONModel: 12523685c4b623553ccf844bbbf7007624317b2c
   SDWebImage: 247edd7dd80dd6124197b0d6a17846fe9d1df968
 

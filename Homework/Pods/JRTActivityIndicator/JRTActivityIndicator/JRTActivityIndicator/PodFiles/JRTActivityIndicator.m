@@ -20,15 +20,13 @@
 
 #import "JRTActivityIndicator.h"
 #import "JRTActivityIndicatorView.h"
-#import "JRTActualViewController.h"
-
 
 #define ShowNetworkActivityIndicator() [UIApplication sharedApplication].networkActivityIndicatorVisible = YES
 #define HideNetworkActivityIndicator() [UIApplication sharedApplication].networkActivityIndicatorVisible = NO
 
 
 @interface JRTActivityIndicator ()
-@property (nonatomic, strong) JRTActivityIndicatorView * activityIndicatorview;
+@property (nonatomic, strong) UIView<JRTActivityIndicatorViewProtocol> * activityIndicatorview;
 @end
 
 CGFloat const kActivityIndicatorAnimationDuration = 0.35;
@@ -37,26 +35,41 @@ CGFloat const kActivityIndicatorAnimationDuration = 0.35;
 
 #pragma mark - Getters
 
--(JRTActivityIndicatorView *)activityIndicatorview
+- (NSString *)ViewNibName
+{
+    return @"JRTActivityIndicatorView";
+}
+
+- (UIView<JRTActivityIndicatorViewProtocol> *)activityIndicatorview
 {
     if (!_activityIndicatorview)
     {
-        UINib *nib = [UINib nibWithNibName:@"JRTActivityIndicatorView" bundle:nil];
+        UINib *nib = [UINib nibWithNibName:[self ViewNibName] bundle:nil];
         _activityIndicatorview = [[nib instantiateWithOwner:self options:nil] firstObject];
     }
     return _activityIndicatorview;
 }
 
 #pragma mark - Public
+- (void)show
+{
+    [self showAnimated:YES];
+}
 
 - (void)showAnimated:(BOOL)animated
 {
-    [self showInView:[JRTActualViewController rootViewController].view animated:animated network:YES];
+    [self showInView:[UIApplication sharedApplication].keyWindow.rootViewController.view animated:animated network:YES message:nil];
 }
 
-- (void)showInView:(UIView *)view animated:(BOOL)animated network:(BOOL)network
+- (void)showAnimated:(BOOL)animated message:(NSString *)message
 {
-    self.activityIndicatorview.frame = view.frame;
+    [self showInView:[UIApplication sharedApplication].keyWindow.rootViewController.view animated:animated network:YES message:message];
+}
+
+
+- (void)showInView:(UIView *)view animated:(BOOL)animated network:(BOOL)network message:(NSString *)message
+{
+    self.activityIndicatorview.frame = view.bounds;
     [view addSubview:self.activityIndicatorview];
 
     [view addConstraint:[NSLayoutConstraint constraintWithItem:self.activityIndicatorview
@@ -101,9 +114,10 @@ CGFloat const kActivityIndicatorAnimationDuration = 0.35;
         self.activityIndicatorview.alpha = 1;
     }
     if (network) [self ShowNetworkActivity];
+    if (message) [self.activityIndicatorview setMessage:message];
 }
 
-- (void)removeAnimated:(BOOL)animated network:(BOOL)network
+- (void)hideAnimated:(BOOL)animated network:(BOOL)network
 {
     if (animated)
     {
@@ -127,9 +141,14 @@ CGFloat const kActivityIndicatorAnimationDuration = 0.35;
     if (network) [self HideNetworkActivity];
 }
 
-- (void)removeAnimated:(BOOL)animated;
+- (void)hideAnimated:(BOOL)animated;
 {
-    [self removeAnimated:animated network:YES];
+    [self hideAnimated:animated network:YES];
+}
+
+- (void)hide
+{
+    [self hideAnimated:YES];
 }
 
 - (void)ShowNetworkActivity

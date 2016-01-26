@@ -20,8 +20,8 @@
 
 //This is an Alpha Version, Updating for AFNetworking 3.0.4
 
-#import <JSONModel/JSONModel.h>
-#import <AFHTTPSessionManager.h>
+#import "JSONModel/JSONModel.h"
+#import "AFHTTPSessionManager.h"
 
 #pragma mark - Constants
 extern NSString * const kAPI_URL;
@@ -40,7 +40,7 @@ typedef enum
     JRTRequestTypeDelete
 } JRTRequestType;
 
-@interface JRTModelAPI : JSONModel
+@interface JRTAPIModel : JSONModel
 
 @property (nonatomic, readonly) NSString *API_URL;
 
@@ -83,6 +83,5 @@ typedef enum
            success:(JRTObjectBlok)success
            failure:(JRTErrorBlock)failure;
 
-- (id)getClass;
 
 @end

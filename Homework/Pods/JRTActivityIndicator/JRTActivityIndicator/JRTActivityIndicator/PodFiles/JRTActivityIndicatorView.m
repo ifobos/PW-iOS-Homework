@@ -18,13 +18,18 @@
 //OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //THE SOFTWARE.
 
-@import UIKit;
+#import "JRTActivityIndicatorView.h"
+#import "JRTActivityIndicator.h"
 
-@interface JRTActivityIndicator : NSObject
-- (void)showAnimated:(BOOL)animated;
-- (void)removeAnimated:(BOOL)animated;
-- (void)removeAnimated:(BOOL)animated network:(BOOL)network;
-- (void)showInView:(UIView *)view animated:(BOOL)animated network:(BOOL)network;
-- (void)ShowNetworkActivity;
-- (void)HideNetworkActivity;
+@interface JRTActivityIndicatorView () <JRTActivityIndicatorViewProtocol>
+@property (weak, nonatomic) IBOutlet UILabel *messageLabel;
+@end
+
+@implementation JRTActivityIndicatorView
+
+-(void)setMessage:(NSString *)message
+{
+    self.messageLabel.text = message;
+}
+
 @end

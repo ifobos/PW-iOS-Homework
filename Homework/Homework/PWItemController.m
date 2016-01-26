@@ -51,17 +51,17 @@ NSString * const kFormatDateView    = @"MMM d, yyyy 'at' h:mmaa";
 - (void)fetchItems
 {
     JRTActivityIndicator *activityIndicator = [JRTActivityIndicator new];
-    [activityIndicator showAnimated:YES];
+    [activityIndicator show];
     [[PWItemModel new] itemListWithSuccess:^(id data)
     {
         self.items = data;
         [self.mainViewController loadData];
-        [activityIndicator removeAnimated:YES];
+        [activityIndicator hide];
     }
                                    failure:^(NSError *error)
     {
         NSLog(@"Error: %@", error);
-        [activityIndicator removeAnimated:YES];
+        [activityIndicator hide];
     }];
 }
 

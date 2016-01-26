@@ -7,14 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		31225BA61C4956A2007E240D /* JRTRoundedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31225BA51C4956A2007E240D /* JRTRoundedView.m */; };
-		3179E7701C47FE7300B3890E /* JRTModelAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 3179E76F1C47FE7300B3890E /* JRTModelAPI.m */; };
 		3179E7741C47FFBA00B3890E /* PWModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3179E7731C47FFBA00B3890E /* PWModel.m */; };
 		3179E7771C4811EB00B3890E /* PWItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3179E7761C4811EB00B3890E /* PWItemModel.m */; };
-		3179E77E1C481BAE00B3890E /* JRTActivityIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3179E77A1C481BAE00B3890E /* JRTActivityIndicator.m */; };
-		3179E77F1C481BAE00B3890E /* JRTActivityIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3179E77C1C481BAE00B3890E /* JRTActivityIndicatorView.m */; };
-		3179E7801C481BAE00B3890E /* JRTActivityIndicatorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3179E77D1C481BAE00B3890E /* JRTActivityIndicatorView.xib */; };
-		3179E7841C481C1800B3890E /* JRTActualViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3179E7831C481C1800B3890E /* JRTActualViewController.m */; };
 		31B664C01C46A60D00105544 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 31B664BF1C46A60D00105544 /* main.m */; };
 		31B664C31C46A60D00105544 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 31B664C21C46A60D00105544 /* AppDelegate.m */; };
 		31B664C51C46A60D00105544 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31B664C41C46A60D00105544 /* Assets.xcassets */; };
@@ -54,21 +48,10 @@
 
 /* Begin PBXFileReference section */
 		232304340E52882286E38209 /* Pods-Homework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Homework.release.xcconfig"; path = "Pods/Target Support Files/Pods-Homework/Pods-Homework.release.xcconfig"; sourceTree = "<group>"; };
-		31225BA41C4956A2007E240D /* JRTRoundedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JRTRoundedView.h; sourceTree = "<group>"; };
-		31225BA51C4956A2007E240D /* JRTRoundedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JRTRoundedView.m; sourceTree = "<group>"; };
-		3179E76E1C47FE7300B3890E /* JRTModelAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JRTModelAPI.h; sourceTree = "<group>"; };
-		3179E76F1C47FE7300B3890E /* JRTModelAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JRTModelAPI.m; sourceTree = "<group>"; };
 		3179E7721C47FFBA00B3890E /* PWModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PWModel.h; sourceTree = "<group>"; };
 		3179E7731C47FFBA00B3890E /* PWModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PWModel.m; sourceTree = "<group>"; };
 		3179E7751C4811EB00B3890E /* PWItemModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PWItemModel.h; sourceTree = "<group>"; };
 		3179E7761C4811EB00B3890E /* PWItemModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PWItemModel.m; sourceTree = "<group>"; };
-		3179E7791C481BAE00B3890E /* JRTActivityIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JRTActivityIndicator.h; sourceTree = "<group>"; };
-		3179E77A1C481BAE00B3890E /* JRTActivityIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JRTActivityIndicator.m; sourceTree = "<group>"; };
-		3179E77B1C481BAE00B3890E /* JRTActivityIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JRTActivityIndicatorView.h; sourceTree = "<group>"; };
-		3179E77C1C481BAE00B3890E /* JRTActivityIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JRTActivityIndicatorView.m; sourceTree = "<group>"; };
-		3179E77D1C481BAE00B3890E /* JRTActivityIndicatorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JRTActivityIndicatorView.xib; sourceTree = "<group>"; };
-		3179E7821C481C1800B3890E /* JRTActualViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JRTActualViewController.h; sourceTree = "<group>"; };
-		3179E7831C481C1800B3890E /* JRTActualViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JRTActualViewController.m; sourceTree = "<group>"; };
 		31B664BB1C46A60D00105544 /* Homework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homework.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31B664BF1C46A60D00105544 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		31B664C11C46A60D00105544 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -130,24 +113,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		31225BA31C4956A2007E240D /* RoundedView */ = {
-			isa = PBXGroup;
-			children = (
-				31225BA41C4956A2007E240D /* JRTRoundedView.h */,
-				31225BA51C4956A2007E240D /* JRTRoundedView.m */,
-			);
-			path = RoundedView;
-			sourceTree = "<group>";
-		};
-		3179E76D1C47FE7300B3890E /* JSONModel + AFNetworking */ = {
-			isa = PBXGroup;
-			children = (
-				3179E76E1C47FE7300B3890E /* JRTModelAPI.h */,
-				3179E76F1C47FE7300B3890E /* JRTModelAPI.m */,
-			);
-			path = "JSONModel + AFNetworking";
-			sourceTree = "<group>";
-		};
 		3179E7711C47FEED00B3890E /* DataSourceModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -155,27 +120,6 @@
 				3179E7731C47FFBA00B3890E /* PWModel.m */,
 			);
 			name = DataSourceModel;
-			sourceTree = "<group>";
-		};
-		3179E7781C481BAE00B3890E /* ActivityIndicator */ = {
-			isa = PBXGroup;
-			children = (
-				3179E7791C481BAE00B3890E /* JRTActivityIndicator.h */,
-				3179E77A1C481BAE00B3890E /* JRTActivityIndicator.m */,
-				3179E77B1C481BAE00B3890E /* JRTActivityIndicatorView.h */,
-				3179E77C1C481BAE00B3890E /* JRTActivityIndicatorView.m */,
-				3179E77D1C481BAE00B3890E /* JRTActivityIndicatorView.xib */,
-			);
-			path = ActivityIndicator;
-			sourceTree = "<group>";
-		};
-		3179E7811C481C1800B3890E /* ActualViewController */ = {
-			isa = PBXGroup;
-			children = (
-				3179E7821C481C1800B3890E /* JRTActualViewController.h */,
-				3179E7831C481C1800B3890E /* JRTActualViewController.m */,
-			);
-			path = ActualViewController;
 			sourceTree = "<group>";
 		};
 		31B664B21C46A60C00105544 = {
@@ -205,7 +149,9 @@
 			children = (
 				3179E7711C47FEED00B3890E /* DataSourceModel */,
 				31B664FA1C46EB4000105544 /* Resources */,
-				31B664F01C46A9B000105544 /* Modules */,
+				31B664F31C46A9FA00105544 /* Model */,
+				31B664F21C46A9C700105544 /* Controller */,
+				31B664F11C46A9BE00105544 /* View */,
 				31B664EC1C46A96A00105544 /* Navigation */,
 				31B664C11C46A60D00105544 /* AppDelegate.h */,
 				31B664C21C46A60D00105544 /* AppDelegate.m */,
@@ -247,10 +193,6 @@
 		31B664EB1C46A7A500105544 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
-				31225BA31C4956A2007E240D /* RoundedView */,
-				3179E7811C481C1800B3890E /* ActualViewController */,
-				3179E7781C481BAE00B3890E /* ActivityIndicator */,
-				3179E76D1C47FE7300B3890E /* JSONModel + AFNetworking */,
 				31B6651D1C47141D00105544 /* StretchyHeaderTableView */,
 				31B664FD1C46ED3600105544 /* NavigationBarStyle */,
 			);
@@ -265,16 +207,6 @@
 			);
 			name = Navigation;
 			path = NavigarionCore;
-			sourceTree = "<group>";
-		};
-		31B664F01C46A9B000105544 /* Modules */ = {
-			isa = PBXGroup;
-			children = (
-				31B664F31C46A9FA00105544 /* Model */,
-				31B664F21C46A9C700105544 /* Controller */,
-				31B664F11C46A9BE00105544 /* View */,
-			);
-			name = Modules;
 			sourceTree = "<group>";
 		};
 		31B664F11C46A9BE00105544 /* View */ = {
@@ -486,7 +418,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				31B664C51C46A60D00105544 /* Assets.xcassets in Resources */,
-				3179E7801C481BAE00B3890E /* JRTActivityIndicatorView.xib in Resources */,
 				31B665061C46F1D200105544 /* PWMasterCollectionViewCell.xib in Resources */,
 				31B664FC1C46EC3900105544 /* Localizable.strings in Resources */,
 				31B664C81C46A60D00105544 /* LaunchScreen.storyboard in Resources */,
@@ -568,14 +499,9 @@
 				31B664F81C46AB1500105544 /* PWMasterViewController.m in Sources */,
 				31B665001C46ED3600105544 /* JRTNavigationBarStyle.m in Sources */,
 				31B664EF1C46A96A00105544 /* PWNavigation.m in Sources */,
-				3179E77E1C481BAE00B3890E /* JRTActivityIndicator.m in Sources */,
 				31B6651B1C47138D00105544 /* PWDetailViewController.m in Sources */,
-				3179E77F1C481BAE00B3890E /* JRTActivityIndicatorView.m in Sources */,
-				31225BA61C4956A2007E240D /* JRTRoundedView.m in Sources */,
-				3179E7701C47FE7300B3890E /* JRTModelAPI.m in Sources */,
 				3179E7741C47FFBA00B3890E /* PWModel.m in Sources */,
 				3179E7771C4811EB00B3890E /* PWItemModel.m in Sources */,
-				3179E7841C481C1800B3890E /* JRTActualViewController.m in Sources */,
 				31B665231C47141D00105544 /* JRTStretchyHeaderTableView.m in Sources */,
 				31B664C01C46A60D00105544 /* main.m in Sources */,
 				31B665051C46F1D200105544 /* PWMasterCollectionViewCell.m in Sources */,

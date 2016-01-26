@@ -21,17 +21,17 @@
 //This is an Alpha Version, Updating for AFNetworking 3.0.4
 
 
-#import "JRTModelAPI.h"
+#import "JRTAPIModel.h"
 
 
-@interface JRTModelAPI()
+@interface JRTAPIModel()
 @property (nonatomic, strong) AFHTTPSessionManager<Ignore> *manager;
 @property (nonatomic, readonly) NSString * keyErrorDescription;
 @property (nonatomic, readonly) NSString * keyErrorFailureReason;
 @end
 
 
-@implementation JRTModelAPI
+@implementation JRTAPIModel
 
 #pragma mark - Implement
 
@@ -73,32 +73,12 @@
     return nil;
 }
 
-
-- (NSString *)keyErrorDescription
-{
-    @throw  [[NSException alloc] initWithName:[NSString stringWithFormat:@"%@", self.class]
-                                       reason:[NSString stringWithFormat:@"(readonly) %@, It should be implemented in sub-class. ", NSStringFromSelector(_cmd)]
-                                     userInfo:nil];
-
-    return nil;
-}
-
-- (NSString *)keyErrorFailureReason
-{
-    @throw  [[NSException alloc] initWithName:[NSString stringWithFormat:@"%@", self.class]
-                                       reason:[NSString stringWithFormat:@"(readonly) %@, It should be implemented in sub-class. ", NSStringFromSelector(_cmd)]
-                                     userInfo:nil];
-
-    return nil;
-}
-
-- (void)catchError:(NSError *)error
-  requestOperation:(NSURLSessionTask *)operation
-       requestType:(JRTRequestType)requestType
-              path:(NSString *)path
-            params:(NSDictionary *)params
-           success:(JRTObjectBlok)success
-           failure:(JRTErrorBlock)failure
+- (void)catchFailureOperation:(NSURLSessionTask *)operation
+                  requestType:(JRTRequestType)requestType
+                         path:(NSString *)path
+                       params:(NSDictionary *)params
+                      success:(JRTObjectBlok)success
+                      failure:(JRTErrorBlock)failure
 {
     @throw  [[NSException alloc] initWithName:[NSString stringWithFormat:@"%@", self.class]
                                        reason:[NSString stringWithFormat:@"%@, It should be implemented in sub-class. ", NSStringFromSelector(_cmd)]
@@ -140,12 +120,6 @@
     }
     return _manager;
 }
-
-- (id)getClass
-{
-    return self.class;
-}
-
 
 - (void)setHeaderParameters:(NSArray *)headers
        forRequestSerializer:(AFHTTPRequestSerializer *)requestSerializer
@@ -240,19 +214,18 @@
                                           success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject)
                                 {
                                     NSError *error;
-                                    NSDictionary *result = [NSJSONSerialization JSONObjectWithData:responseObject options:0 error:&error];
+                                    id result = [NSJSONSerialization JSONObjectWithData:responseObject options:0 error:&error];
                                     success(result);
                                 }
                                           failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error)
                                 {
                                     NSLog(@"Error on [GET]: %@", error);
-                                    [self catchError:[self errorFromOperation:task]
-                                    requestOperation:task
-                                         requestType:JRTRequestTypeGet
-                                                path:path
-                                              params:params
-                                             success:success
-                                             failure:failure];
+                                    [self catchFailureOperation:task
+                                                    requestType:JRTRequestTypeGet
+                                                           path:path
+                                                         params:params
+                                                        success:success
+                                                        failure:failure];
 
                                 }];
                             }
@@ -288,13 +261,12 @@
                                            failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error)
                                 {
                                     NSLog(@"Error on [POST]: %@", error);
-                                    [self catchError:[self errorFromOperation:task]
-                                    requestOperation:task
-                                         requestType:JRTRequestTypePost
-                                                path:path
-                                              params:params
-                                             success:success
-                                             failure:failure];
+                                    [self catchFailureOperation:task
+                                                    requestType:JRTRequestTypePost
+                                                           path:path
+                                                         params:params
+                                                        success:success
+                                                        failure:failure];
 
                                 }];
                             }
@@ -325,19 +297,20 @@
                                 }
                                            success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject)
                                 {
-                                    success(responseObject);
+                                    NSError *error;
+                                    id result = [NSJSONSerialization JSONObjectWithData:responseObject options:0 error:&error];
+                                    success(result);
                                 }
                                            failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error)
                                 {
                                     NSLog(@"Error on [POST]: %@", error);
                                     NSLog(@"JSON Error on [POST]: %@", task.response);
-                                    [self catchError:[self errorFromOperation:task]
-                                    requestOperation:task
-                                         requestType:JRTRequestTypePostJson
-                                                path:path
-                                              params:params
-                                             success:success
-                                             failure:failure];
+                                    [self catchFailureOperation:task
+                                                    requestType:JRTRequestTypePostJson
+                                                           path:path
+                                                         params:params
+                                                        success:success
+                                                        failure:failure];
                                 }];
                             }
                     failure:^(NSError *error)
@@ -370,13 +343,12 @@
                                           failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error)
                                 {
                                     NSLog(@"Error on [GET]: %@", error);
-                                    [self catchError:[self errorFromOperation:task]
-                                    requestOperation:task
-                                         requestType:JRTRequestTypePut
-                                                path:path
-                                              params:params
-                                             success:success
-                                             failure:failure];
+                                    [self catchFailureOperation:task
+                                                    requestType:JRTRequestTypePut
+                                                           path:path
+                                                         params:params
+                                                        success:success
+                                                        failure:failure];
                                 }];
                                 
                             }
@@ -404,19 +376,20 @@
                                        parameters:params
                                           success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject)
                                 {
-                                    success(responseObject);
+                                    NSError *error;
+                                    id result = [NSJSONSerialization JSONObjectWithData:responseObject options:0 error:&error];
+                                    success(result);
                                 }
                                           failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error)
                                 {
                                     NSLog(@"Error on [PUT]: %@", error);
                                     NSLog(@"JSON Error on [PUT]: %@", task.response);
-                                    [self catchError:[self errorFromOperation:task]
-                                    requestOperation:task
-                                         requestType:JRTRequestTypePutJson
-                                                path:path
-                                              params:params
-                                             success:success
-                                             failure:failure];
+                                    [self catchFailureOperation:task
+                                                    requestType:JRTRequestTypePutJson
+                                                           path:path
+                                                         params:params
+                                                        success:success
+                                                        failure:failure];
                                 }];
                             }
                     failure:^(NSError *error)
@@ -442,18 +415,19 @@
                                           parameters:params
                                              success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject)
                                 {
-                                    success(responseObject);
+                                    NSError *error;
+                                    id result = [NSJSONSerialization JSONObjectWithData:responseObject options:0 error:&error];
+                                    success(result);
                                 }
                                              failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error)
                                 {
                                     NSLog(@"Error on [Delete]: %@", error);
-                                    [self catchError:[self errorFromOperation:task]
-                                    requestOperation:task
-                                         requestType:JRTRequestTypeDelete
-                                                path:path
-                                              params:params
-                                             success:success
-                                             failure:failure];
+                                    [self catchFailureOperation:task
+                                                    requestType:JRTRequestTypeDelete
+                                                           path:path
+                                                         params:params
+                                                        success:success
+                                                        failure:failure];
                                 }];
                             }
                     failure:^(NSError *error)
@@ -468,29 +442,6 @@
 {
     NSString* encodedUrl = [url stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
     return encodedUrl;
-}
-
-
--(NSError *)errorFromOperation:(NSURLSessionDataTask *)operation
-{
-    NSDictionary * errorJson = nil;
-    NSString *description    = @"Error";
-    NSString *failureReason  = @"No connection to the server";
-    
-    id responseObject = operation.response;
-    if ([responseObject isKindOfClass:[NSDictionary class]])
-    {
-            errorJson = responseObject;
-            if ([errorJson objectForKey:self.keyErrorDescription]) description     = [errorJson objectForKey:self.keyErrorDescription];
-            if ([errorJson objectForKey:self.keyErrorFailureReason]) failureReason = [errorJson objectForKey:self.keyErrorFailureReason];
-    }
-    NSError *err = [NSError errorWithDomain:@"API"
-                                       code:((NSHTTPURLResponse *)(operation.response)).statusCode
-                                   userInfo:@{
-                                              NSLocalizedDescriptionKey:description,
-                                              NSLocalizedFailureReasonErrorKey: failureReason
-                                              }];
-    return err;
 }
 
 @end
