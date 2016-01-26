@@ -107,6 +107,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		311BD3F01C58189F008A1422 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				31B664FA1C46EB4000105544 /* Resources */,
+				31B664EC1C46A96A00105544 /* Navigation */,
+				3179E7711C47FEED00B3890E /* DataSourceModel */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
 		3179E7711C47FEED00B3890E /* DataSourceModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -141,19 +151,14 @@
 		31B664BD1C46A60D00105544 /* Homework */ = {
 			isa = PBXGroup;
 			children = (
-				3179E7711C47FEED00B3890E /* DataSourceModel */,
-				31B664FA1C46EB4000105544 /* Resources */,
-				31B664F31C46A9FA00105544 /* Model */,
-				31B664F21C46A9C700105544 /* Controller */,
-				31B664F11C46A9BE00105544 /* View */,
-				31B664EC1C46A96A00105544 /* Navigation */,
 				31B664C11C46A60D00105544 /* AppDelegate.h */,
 				31B664C21C46A60D00105544 /* AppDelegate.m */,
-				31B664C41C46A60D00105544 /* Assets.xcassets */,
-				31B664C61C46A60D00105544 /* LaunchScreen.storyboard */,
-				31B664C91C46A60D00105544 /* Info.plist */,
+				31B664F11C46A9BE00105544 /* View */,
+				31B664F21C46A9C700105544 /* Controller */,
+				31B664F31C46A9FA00105544 /* Model */,
+				311BD3F01C58189F008A1422 /* Utils */,
 				31B664BE1C46A60D00105544 /* Supporting Files */,
-				31B664EB1C46A7A500105544 /* Libraries */,
+				31B664C41C46A60D00105544 /* Assets.xcassets */,
 			);
 			path = Homework;
 			sourceTree = "<group>";
@@ -161,6 +166,7 @@
 		31B664BE1C46A60D00105544 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				31B664C91C46A60D00105544 /* Info.plist */,
 				31B664BF1C46A60D00105544 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -184,13 +190,6 @@
 			path = HomeworkUITests;
 			sourceTree = "<group>";
 		};
-		31B664EB1C46A7A500105544 /* Libraries */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Libraries;
-			sourceTree = "<group>";
-		};
 		31B664EC1C46A96A00105544 /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
@@ -204,6 +203,7 @@
 		31B664F11C46A9BE00105544 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				31B664C61C46A60D00105544 /* LaunchScreen.storyboard */,
 				31B6650A1C4703A700105544 /* DetailView */,
 				31B664F41C46AAD900105544 /* MasterView */,
 			);
