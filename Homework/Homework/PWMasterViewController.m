@@ -11,6 +11,7 @@
 
 @interface PWMasterViewController ()<UICollectionViewDelegate>
 @property (strong, nonatomic) UIImageView *emptyView;
+@property (strong, nonatomic) UIBarButtonItem *connectionStatusView;
 @end
 
 @implementation PWMasterViewController
@@ -55,11 +56,25 @@ static NSString *   const reuseIdentifier       = @"Cell";
     return _emptyView;
 }
 
+- (UIBarButtonItem *)connectionStatusView
+{
+    if (!_connectionStatusView)
+    {
+        _connectionStatusView               = [UIBarButtonItem new];
+        _connectionStatusView.image         = [UIImage imageNamed:@"serverConnection"];
+        _connectionStatusView.tintColor     = [UIColor grayColor];
+        _connectionStatusView.enabled       = NO;
+    }
+    return _connectionStatusView;
+}
+
 #pragma mark Setup 
 
 - (void)setup
 {
+ 
     self.title                                  = NSLocalizedString(@"PhunApp",);
+    self.navigationItem.rightBarButtonItem      = self.connectionStatusView;
     self.collectionView.backgroundView          = self.emptyView;
     self.collectionView.alwaysBounceVertical    = YES;
     UIRefreshControl *refreshControl            = [UIRefreshControl new];

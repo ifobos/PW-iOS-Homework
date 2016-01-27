@@ -13,7 +13,7 @@
 - (void)headerWithSuccess:(void (^)(NSArray *headers))successHeader
                   failure:(void (^)(NSError *error))failure
 {
-        successHeader(nil);
+    successHeader(nil);
 }
 
 - (NSString *)API_URL
@@ -21,25 +21,14 @@
     return @"https://raw.githubusercontent.com/phunware/services-interview-resources/master";
 }
 
-- (NSString *)keyErrorDescription
+- (void)catchFailureOperation:(NSURLSessionTask *)operation
+                  requestType:(JRTRequestType)requestType
+                         path:(NSString *)path
+                       params:(NSDictionary *)params
+                      success:(JRTObjectBlok)success
+                      failure:(JRTErrorBlock)failure
 {
-    return nil;
-}
-
-- (NSString *)keyErrorFailureReason
-{
-    return nil;
-}
-
-- (void)catchError:(NSError *)error
-  requestOperation:(NSURLSessionTask *)operation
-       requestType:(JRTRequestType)requestType
-              path:(NSString *)path
-            params:(NSDictionary *)params
-           success:(JRTObjectBlok)success
-           failure:(JRTErrorBlock)failure
-{
-        failure(error);
+            failure(nil);
 }
 
 @end

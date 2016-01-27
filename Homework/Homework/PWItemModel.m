@@ -40,7 +40,7 @@ NSString * const kCacheItems = @"cacheItems";
     [self itemListRequestWithSuccess:success
                              failure:^(NSError *error)
     {
-        [self itemListCacheWithSuccess:success];
+        success(nil);
     }];
 }
 
