@@ -8,6 +8,7 @@
 
 #import "PWMasterViewController.h"
 #import "PWMasterCollectionViewCell.h"
+#import <JRTAPIModel.h>
 
 @interface PWMasterViewController ()<UICollectionViewDelegate>
 @property (strong, nonatomic) UIImageView *emptyView;
@@ -61,8 +62,6 @@ static NSString *   const reuseIdentifier       = @"Cell";
     if (!_connectionStatusView)
     {
         _connectionStatusView               = [UIBarButtonItem new];
-        _connectionStatusView.image         = [UIImage imageNamed:@"serverConnection"];
-        _connectionStatusView.tintColor     = [UIColor grayColor];
         _connectionStatusView.enabled       = NO;
     }
     return _connectionStatusView;
@@ -72,7 +71,6 @@ static NSString *   const reuseIdentifier       = @"Cell";
 
 - (void)setup
 {
- 
     self.title                                  = NSLocalizedString(@"PhunApp",);
     self.navigationItem.rightBarButtonItem      = self.connectionStatusView;
     self.collectionView.backgroundView          = self.emptyView;
@@ -82,6 +80,15 @@ static NSString *   const reuseIdentifier       = @"Cell";
     [self.collectionView addSubview:refreshControl];
     [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
     [self.collectionView registerNib:[UINib nibWithNibName:@"PWMasterCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:reuseIdentifier];
+    [JRTAPIModel reachabilityStatusWithReachable:^
+    {
+        self.connectionStatusView.image = [UIImage imageNamed:@"serverConnected"];
+    }
+                                    notReachable:^
+    {
+        self.connectionStatusView.image = [UIImage imageNamed:@"serverDisconnect"];
+    }];
+
 }
 
 #pragma mark UIViewController

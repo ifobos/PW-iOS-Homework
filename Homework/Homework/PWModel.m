@@ -22,13 +22,14 @@
 }
 
 - (void)catchFailureOperation:(NSURLSessionTask *)operation
+                        error:(NSError *)error
                   requestType:(JRTRequestType)requestType
                          path:(NSString *)path
                        params:(NSDictionary *)params
                       success:(JRTObjectBlok)success
                       failure:(JRTErrorBlock)failure
 {
-            failure(nil);
+            failure(error);
 }
 
 @end

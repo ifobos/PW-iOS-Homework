@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import <JRTAPIModel.h>
 @interface AppDelegate ()
 
 @end
@@ -34,6 +34,7 @@
 {
 //    mainRouter It is responsible for loading the main
 //    navigation structure of the application
+    [JRTAPIModel startReachabilityMonitoring];
     self.window.rootViewController = [self.mainRouter rootViewController];
     [self.window makeKeyAndVisible];
     return YES;
