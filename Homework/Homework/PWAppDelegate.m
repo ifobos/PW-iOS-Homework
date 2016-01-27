@@ -6,13 +6,13 @@
 //  Copyright © 2016 Applaudo Studios. All rights reserved.
 //
 
-#import "AppDelegate.h"
+#import "PWAppDelegate.h"
 #import <JRTAPIModel.h>
-@interface AppDelegate ()
+@interface PWAppDelegate ()
 
 @end
 
-@implementation AppDelegate
+@implementation PWAppDelegate
 
 #pragma mark - Getters
 

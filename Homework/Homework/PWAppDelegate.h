@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "PWNavigation.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface PWAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 @property (nonatomic, strong) PWNavigation *mainRouter;

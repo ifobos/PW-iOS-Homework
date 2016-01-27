@@ -10,7 +10,7 @@
 		3179E7741C47FFBA00B3890E /* PWModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3179E7731C47FFBA00B3890E /* PWModel.m */; };
 		3179E7771C4811EB00B3890E /* PWItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3179E7761C4811EB00B3890E /* PWItemModel.m */; };
 		31B664C01C46A60D00105544 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 31B664BF1C46A60D00105544 /* main.m */; };
-		31B664C31C46A60D00105544 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 31B664C21C46A60D00105544 /* AppDelegate.m */; };
+		31B664C31C46A60D00105544 /* PWAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 31B664C21C46A60D00105544 /* PWAppDelegate.m */; };
 		31B664C51C46A60D00105544 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31B664C41C46A60D00105544 /* Assets.xcassets */; };
 		31B664C81C46A60D00105544 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31B664C61C46A60D00105544 /* LaunchScreen.storyboard */; };
 		31B664D31C46A60D00105544 /* HomeworkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 31B664D21C46A60D00105544 /* HomeworkTests.m */; };
@@ -52,8 +52,8 @@
 		3179E7761C4811EB00B3890E /* PWItemModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PWItemModel.m; sourceTree = "<group>"; };
 		31B664BB1C46A60D00105544 /* Homework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homework.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31B664BF1C46A60D00105544 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		31B664C11C46A60D00105544 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		31B664C21C46A60D00105544 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		31B664C11C46A60D00105544 /* PWAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PWAppDelegate.h; sourceTree = "<group>"; };
+		31B664C21C46A60D00105544 /* PWAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PWAppDelegate.m; sourceTree = "<group>"; };
 		31B664C41C46A60D00105544 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		31B664C71C46A60D00105544 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		31B664C91C46A60D00105544 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -156,8 +156,8 @@
 				31B664BE1C46A60D00105544 /* Supporting Files */,
 				311BD3F01C58189F008A1422 /* Utils */,
 				31B664F11C46A9BE00105544 /* View */,
-				31B664C11C46A60D00105544 /* AppDelegate.h */,
-				31B664C21C46A60D00105544 /* AppDelegate.m */,
+				31B664C11C46A60D00105544 /* PWAppDelegate.h */,
+				31B664C21C46A60D00105544 /* PWAppDelegate.m */,
 				31B664C41C46A60D00105544 /* Assets.xcassets */,
 			);
 			path = Homework;
@@ -468,7 +468,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				31B664C31C46A60D00105544 /* AppDelegate.m in Sources */,
+				31B664C31C46A60D00105544 /* PWAppDelegate.m in Sources */,
 				31B664F81C46AB1500105544 /* PWMasterViewController.m in Sources */,
 				31B664EF1C46A96A00105544 /* PWNavigation.m in Sources */,
 				31B6651B1C47138D00105544 /* PWDetailViewController.m in Sources */,
