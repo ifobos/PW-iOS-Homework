@@ -10,6 +10,7 @@
 #import "PWMasterCollectionViewCell.h"
 
 @interface PWMasterViewController ()<UICollectionViewDelegate>
+@property (strong, nonatomic) UIImageView *emptyView;
 @end
 
 @implementation PWMasterViewController
@@ -42,14 +43,38 @@ static NSString *   const reuseIdentifier       = @"Cell";
     return _itemController;
 }
 
+- (UIImageView *)emptyView
+{
+    if (!_emptyView)
+    {
+        _emptyView                  = [UIImageView new];
+        _emptyView.image            = [UIImage imageNamed:@"pullDownGesture"];
+        _emptyView.contentMode      = UIViewContentModeCenter;
+        _emptyView.backgroundColor  = [UIColor darkGrayColor];
+    }
+    return _emptyView;
+}
+
+#pragma mark Setup 
+
+- (void)setup
+{
+    self.title                                  = NSLocalizedString(@"PhunApp",);
+    self.collectionView.backgroundView          = self.emptyView;
+    self.collectionView.alwaysBounceVertical    = YES;
+    UIRefreshControl *refreshControl            = [UIRefreshControl new];
+    [refreshControl addTarget:self action:@selector(refersh:) forControlEvents:UIControlEventValueChanged];
+    [self.collectionView addSubview:refreshControl];
+    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
+    [self.collectionView registerNib:[UINib nibWithNibName:@"PWMasterCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:reuseIdentifier];
+}
+
 #pragma mark UIViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.title = NSLocalizedString(@"PhunApp",);
-    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
-    [self.collectionView registerNib:[UINib nibWithNibName:@"PWMasterCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:reuseIdentifier];
+    [self setup];
 }
 
 - (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator
@@ -75,7 +100,9 @@ static NSString *   const reuseIdentifier       = @"Cell";
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return [self.itemController numberOfItems];
+    NSInteger numberOfItems = [self.itemController numberOfItems];
+    self.emptyView.hidden   = (numberOfItems > 0);
+    return numberOfItems;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
@@ -87,6 +114,16 @@ static NSString *   const reuseIdentifier       = @"Cell";
     [cell setSubTitle:[self.itemController subTitleOfItemAtIndex:indexPath.row]];
     [cell setDescription:[self.itemController descriptionOfItemAtIndex:indexPath.row]];
     return cell;
+}
+
+#pragma mark Refresh
+
+- (void)refersh:(UIRefreshControl *)sender
+{
+    [self.itemController refreshDataWithSuccess:^
+     {
+         [sender endRefreshing];
+     }];
 }
 
 #pragma mark <UICollectionViewDelegate>

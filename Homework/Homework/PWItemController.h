@@ -18,6 +18,7 @@
 
 @property (nonatomic, weak) UIViewController<PWViewController> *mainViewController;
 
+- (void)refreshDataWithSuccess:(void (^)())success;
 - (NSInteger) numberOfItems;
 - (NSURL *)imageURLOfItemAtIndex:(NSInteger)index;
 - (NSString *)dateOfItemAtIndex:(NSInteger)index;
@@ -31,5 +32,4 @@
 - (NSString *)subTitleOfSelectedItem;
 - (NSString *)descriptionOfSelectedItem;
 - (void)shareItem:(NSArray *)itemsToShare sender:(id)sender;
-
 @end

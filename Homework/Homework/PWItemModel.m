@@ -26,10 +26,27 @@ NSString * const kCacheItems = @"cacheItems";
     return YES;
 }
 
-#pragma mark - Requests
+#pragma mark - Public
 
 - (void)itemListWithSuccess:(void (^)(id data))success
                     failure:(void (^)(NSError * error))failure
+{
+    [self itemListCacheWithSuccess:success];
+    [self itemListRequestWithSuccess:success failure:failure];
+}
+
+- (void)refreshItemListWithSuccess:(void (^)(id data))success
+{
+    [self itemListRequestWithSuccess:success
+                             failure:^(NSError *error)
+    {
+        [self itemListCacheWithSuccess:success];
+    }];
+}
+
+#pragma mark - Cache
+
+- (void)itemListCacheWithSuccess:(void (^)(id data))success
 {
     if ([[NSUserDefaults standardUserDefaults] arrayForKey:kCacheItems])
     {
@@ -42,25 +59,31 @@ NSString * const kCacheItems = @"cacheItems";
         }
         success(cacheItems);
     }
-    
+}
+
+#pragma mark - Request
+
+- (void)itemListRequestWithSuccess:(void (^)(id data))success
+                           failure:(void (^)(NSError * error))failure
+{
     [self getPath:@"feed.json"
            params:@{}
           success:^(id data)
-    {
-        [[NSUserDefaults standardUserDefaults] setObject:data forKey:kCacheItems];
-        [[NSUserDefaults standardUserDefaults] synchronize];
-        NSError *error  = nil;
-        NSArray *items  = [PWItemModel arrayOfModelsFromDictionaries:data error:&error];
-        if (error)
-        {
-            NSLog(@"Error: %@", error);
-        }
-        success(items);
-    }
+     {
+         [[NSUserDefaults standardUserDefaults] setObject:data forKey:kCacheItems];
+         [[NSUserDefaults standardUserDefaults] synchronize];
+         NSError *error  = nil;
+         NSArray *items  = [PWItemModel arrayOfModelsFromDictionaries:data error:&error];
+         if (error)
+         {
+             NSLog(@"Error: %@", error);
+         }
+         success(items);
+     }
           failure:^(NSError *error)
-    {
-        failure(error);
-    }];
+     {
+         failure(error);
+     }];
 }
 
 @end

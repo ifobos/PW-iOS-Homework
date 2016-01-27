@@ -20,5 +20,6 @@
 
 - (void)itemListWithSuccess:(void (^)(id data))success
                     failure:(void (^)(NSError * error))failure;
+- (void)refreshItemListWithSuccess:(void (^)(id data))success;
 
 @end

@@ -61,7 +61,30 @@ NSString * const kFormatDateView    = @"MMM d, yyyy 'at' h:mmaa";
                                    failure:^(NSError *error)
     {
         NSLog(@"Error: %@", error);
+        if ([self.items count] == 0)
+        {
+            UIAlertController *alert    = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"Error", )
+                                                                              message:NSLocalizedString(@"ConnectionToServerFailed", )
+                                                                       preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"OK"
+                                                                   style:UIAlertActionStyleCancel
+                                                                 handler:nil];
+            [alert addAction:cancelAction];
+            [self.mainViewController presentViewController:alert animated:YES completion:nil];
+        }
         [activityIndicator hide];
+    }];
+}
+
+#pragma mark - Refresh
+
+- (void)refreshDataWithSuccess:(void (^)())success
+{
+    [[PWItemModel new] refreshItemListWithSuccess:^(id data)
+    {
+        self.items = data;
+        [self.mainViewController loadData];
+        success();
     }];
 }
 
