@@ -110,11 +110,11 @@
 		311BD3F01C58189F008A1422 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				31B664FA1C46EB4000105544 /* Resources */,
-				31B664EC1C46A96A00105544 /* Navigation */,
 				3179E7711C47FEED00B3890E /* DataSourceModel */,
+				31B664EC1C46A96A00105544 /* Navigation */,
+				31B664FA1C46EB4000105544 /* Resources */,
 			);
-			name = Utils;
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		3179E7711C47FEED00B3890E /* DataSourceModel */ = {
@@ -123,18 +123,18 @@
 				3179E7721C47FFBA00B3890E /* PWModel.h */,
 				3179E7731C47FFBA00B3890E /* PWModel.m */,
 			);
-			name = DataSourceModel;
+			path = DataSourceModel;
 			sourceTree = "<group>";
 		};
 		31B664B21C46A60C00105544 = {
 			isa = PBXGroup;
 			children = (
+				71A51682A71B6D7A9A4D2905 /* Frameworks */,
 				31B664BD1C46A60D00105544 /* Homework */,
 				31B664D11C46A60D00105544 /* HomeworkTests */,
 				31B664DC1C46A60D00105544 /* HomeworkUITests */,
-				31B664BC1C46A60D00105544 /* Products */,
 				E6C07E4A78D0CA25309AE917 /* Pods */,
-				71A51682A71B6D7A9A4D2905 /* Frameworks */,
+				31B664BC1C46A60D00105544 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -151,13 +151,13 @@
 		31B664BD1C46A60D00105544 /* Homework */ = {
 			isa = PBXGroup;
 			children = (
-				31B664C11C46A60D00105544 /* AppDelegate.h */,
-				31B664C21C46A60D00105544 /* AppDelegate.m */,
-				31B664F11C46A9BE00105544 /* View */,
 				31B664F21C46A9C700105544 /* Controller */,
 				31B664F31C46A9FA00105544 /* Model */,
-				311BD3F01C58189F008A1422 /* Utils */,
 				31B664BE1C46A60D00105544 /* Supporting Files */,
+				311BD3F01C58189F008A1422 /* Utils */,
+				31B664F11C46A9BE00105544 /* View */,
+				31B664C11C46A60D00105544 /* AppDelegate.h */,
+				31B664C21C46A60D00105544 /* AppDelegate.m */,
 				31B664C41C46A60D00105544 /* Assets.xcassets */,
 			);
 			path = Homework;
@@ -169,7 +169,7 @@
 				31B664C91C46A60D00105544 /* Info.plist */,
 				31B664BF1C46A60D00105544 /* main.m */,
 			);
-			name = "Supporting Files";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		31B664D11C46A60D00105544 /* HomeworkTests */ = {
@@ -196,18 +196,17 @@
 				31B664ED1C46A96A00105544 /* PWNavigation.h */,
 				31B664EE1C46A96A00105544 /* PWNavigation.m */,
 			);
-			name = Navigation;
-			path = NavigarionCore;
+			path = Navigation;
 			sourceTree = "<group>";
 		};
 		31B664F11C46A9BE00105544 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				31B664C61C46A60D00105544 /* LaunchScreen.storyboard */,
 				31B6650A1C4703A700105544 /* DetailView */,
 				31B664F41C46AAD900105544 /* MasterView */,
+				31B664C61C46A60D00105544 /* LaunchScreen.storyboard */,
 			);
-			name = View;
+			path = View;
 			sourceTree = "<group>";
 		};
 		31B664F21C46A9C700105544 /* Controller */ = {
@@ -216,7 +215,7 @@
 				31B665071C46FE0200105544 /* PWItemController.h */,
 				31B665081C46FE0200105544 /* PWItemController.m */,
 			);
-			name = Controller;
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		31B664F31C46A9FA00105544 /* Model */ = {
@@ -225,7 +224,7 @@
 				3179E7751C4811EB00B3890E /* PWItemModel.h */,
 				3179E7761C4811EB00B3890E /* PWItemModel.m */,
 			);
-			name = Model;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		31B664F41C46AAD900105544 /* MasterView */ = {
@@ -236,7 +235,7 @@
 				31B664F61C46AB1500105544 /* PWMasterViewController.m */,
 				31B664F71C46AB1500105544 /* PWMasterViewController.xib */,
 			);
-			name = MasterView;
+			path = MasterView;
 			sourceTree = "<group>";
 		};
 		31B664FA1C46EB4000105544 /* Resources */ = {
@@ -244,7 +243,7 @@
 			children = (
 				31B664FB1C46EC3900105544 /* Localizable.strings */,
 			);
-			name = Resources;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		31B665011C46F1A500105544 /* Cell */ = {
@@ -254,7 +253,7 @@
 				31B665031C46F1D200105544 /* PWMasterCollectionViewCell.m */,
 				31B665041C46F1D200105544 /* PWMasterCollectionViewCell.xib */,
 			);
-			name = Cell;
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		31B6650A1C4703A700105544 /* DetailView */ = {
@@ -264,7 +263,7 @@
 				31B665191C47138D00105544 /* PWDetailViewController.m */,
 				31B6651A1C47138D00105544 /* PWDetailViewController.xib */,
 			);
-			name = DetailView;
+			path = DetailView;
 			sourceTree = "<group>";
 		};
 		71A51682A71B6D7A9A4D2905 /* Frameworks */ = {
@@ -519,6 +518,7 @@
 				31B664C71C46A60D00105544 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -611,7 +611,7 @@
 			baseConfigurationReference = B3C194A9769CA7BDDE462151 /* Pods-Homework.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = Homework/Info.plist;
+				INFOPLIST_FILE = "Homework/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.applaudostudios.Homework;
@@ -624,7 +624,7 @@
 			baseConfigurationReference = 232304340E52882286E38209 /* Pods-Homework.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = Homework/Info.plist;
+				INFOPLIST_FILE = "Homework/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.applaudostudios.Homework;
