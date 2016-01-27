@@ -52,7 +52,7 @@ static NSString *   const reuseIdentifier       = @"Cell";
         _emptyView                  = [UIImageView new];
         _emptyView.image            = [UIImage imageNamed:@"pullDownGesture"];
         _emptyView.contentMode      = UIViewContentModeCenter;
-        _emptyView.backgroundColor  = [UIColor darkGrayColor];
+        _emptyView.backgroundColor  = [UIColor grayColor];
     }
     return _emptyView;
 }
@@ -82,11 +82,11 @@ static NSString *   const reuseIdentifier       = @"Cell";
     [self.collectionView registerNib:[UINib nibWithNibName:@"PWMasterCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:reuseIdentifier];
     [JRTAPIModel reachabilityStatusWithReachable:^
     {
-        self.connectionStatusView.image = [UIImage imageNamed:@"serverConnected"];
+        self.connectionStatusView.image = [UIImage imageNamed:@"connected"];
     }
                                     notReachable:^
     {
-        self.connectionStatusView.image = [UIImage imageNamed:@"serverDisconnect"];
+        self.connectionStatusView.image = [UIImage imageNamed:@"disconnected"];
     }];
 
 }
